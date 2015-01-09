@@ -194,7 +194,7 @@
         <profile>
             <id>ri</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <!--RI Properties-->
             <properties>
@@ -220,13 +220,38 @@
 
                 <!--################################################################################################################-->
             </properties>
-
-
-
-
         </profile>
 
+        <profile>
+            <id>ignite</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!--RI Properties-->
+            <properties>
+                <!--################################################################################################################-->
 
+                <!--IPV4-->
+                <java.net.preferIPv4Stack>true</java.net.preferIPv4Stack>
+
+                <!--Change the following properties on the command line to override with the coordinates for your implementation-->
+                <implementation-groupId>org.apache.ignite</implementation-groupId>
+                <implementation-artifactId>ignite-core</implementation-artifactId>
+                <implementation-version>7.0.0</implementation-version>
+
+                <!-- Change the following properties to your CacheManager and Cache implementation. Used by the unwrap tests. -->
+                <CacheManagerImpl>org.apache.ignite.IgniteCacheManager</CacheManagerImpl>
+                <CacheImpl>org.apache.ignite.IgniteCache</CacheImpl>
+                <CacheEntryImpl>org.gridgain.grid.cache.GridCacheEntry</CacheEntryImpl>
+
+                <!--Change the following to point to your MBeanServer, so that the TCK can resolve it. -->
+                <javax.management.builder.initial>org.jsr107.ri.management.RITCKMBeanServerBuilder
+                </javax.management.builder.initial>
+                <org.jsr107.tck.management.agentId>RIMBeanServer</org.jsr107.tck.management.agentId>
+
+                <!--################################################################################################################-->
+            </properties>
+        </profile>
     </profiles>
 
     <licenses>

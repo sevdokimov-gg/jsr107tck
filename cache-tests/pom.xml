@@ -134,14 +134,14 @@
         <profile>
             <id>run_tests_from_ide</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
 
-            <properties>
-                <implementation-groupId>org.infinispan</implementation-groupId>
-                <implementation-artifactId>infinispan-jcache</implementation-artifactId>
-                <implementation-version>7.0.2.Final</implementation-version>
-            </properties>
+            <!--<properties>-->
+                <!--<implementation-groupId>org.infinispan</implementation-groupId>-->
+                <!--<implementation-artifactId>infinispan-jcache</implementation-artifactId>-->
+                <!--<implementation-version>7.0.2.Final</implementation-version>-->
+            <!--</properties>-->
 
 
             <dependencies>
