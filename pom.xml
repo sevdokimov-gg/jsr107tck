@@ -237,7 +237,7 @@
                 <!--Change the following properties on the command line to override with the coordinates for your implementation-->
                 <implementation-groupId>org.apache.ignite</implementation-groupId>
                 <implementation-artifactId>ignite-core</implementation-artifactId>
-                <implementation-version>7.0.0</implementation-version>
+                <implementation-version>1.0.0-SNAPSHOT</implementation-version>
 
                 <!-- Change the following properties to your CacheManager and Cache implementation. Used by the unwrap tests. -->
                 <CacheManagerImpl>org.apache.ignite.IgniteCacheManager</CacheManagerImpl>
